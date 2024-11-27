@@ -1,0 +1,1 @@
+export 'betalent_repository.dart';
