@@ -58,10 +58,10 @@ flutter run
    <table>
       <tr>
          <td style="text-align: center">
-            <img src="https://github.com/geanjrii/betalent_challenge/blob/main/images/test1.gif" width="200"/>
+            <img src="https://github.com/geanjrii/betalent_mobile_test/blob/main/images/test1.gif" width="200"/>
          </td>
          <td style="text-align: center">
-            <img src="https://github.com/geanjrii/betalent_challenge/blob/main/images/test2.gif" width="200"/>
+            <img src="https://github.com/geanjrii/betalent_mobile_test/blob/main/images/test2.gif" width="200"/>
          </td>
       </tr>
    </table>
