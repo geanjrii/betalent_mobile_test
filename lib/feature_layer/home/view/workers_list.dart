@@ -27,7 +27,7 @@ class WorkersList extends StatelessWidget {
 class WorkerTile extends StatelessWidget {
   const WorkerTile({super.key, required this.worker});
 
-  final BetalentWorkerModel worker;
+  final BeTalentWorkerModel worker;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class WorkerTile extends StatelessWidget {
         children: [
           WorkerImage(img: worker.image),
           Expanded(child: WorkerName(name: worker.name)),
-          InfoButton(worker: worker),
+          InfoButton(worker: worker, key: Key(worker.id.toString())),
         ],
       ),
     );
@@ -52,9 +52,10 @@ class InfoButton extends StatelessWidget {
   const InfoButton({
     super.key,
     required this.worker,
+    
   });
 
-  final BetalentWorkerModel worker;
+  final BeTalentWorkerModel worker;
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +114,7 @@ class WorkerName extends StatelessWidget {
   }
 }
 
-class WorkerTile1 extends StatelessWidget {
+/* class WorkerTile1 extends StatelessWidget {
   const WorkerTile1({super.key});
 
   @override
@@ -132,3 +133,4 @@ class WorkerTile1 extends StatelessWidget {
     );
   }
 }
+ */

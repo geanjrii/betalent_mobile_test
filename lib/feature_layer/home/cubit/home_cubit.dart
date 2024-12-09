@@ -1,21 +1,22 @@
 import 'package:betalent_mobile_test/data_layer/data_layer.dart';
-import 'package:betalent_mobile_test/domain_layer/domain_layer.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit({required BetalentRepository repository})
+  HomeCubit({required BeTalentWorkerRepository repository})
       : _repository = repository,
-        super(const HomeState.loading());
+        super(const HomeState.loading()) {
+    emit(const HomeState.loading());
+  }
 
-  final BetalentRepository _repository;
+  final BeTalentWorkerRepository _repository;
 
   void onDataLoaded() async {
     try {
-      emit(state.copyWith(apiStatus: LoadingStatus.loading));
-      final workersList = await _repository.getWorkers()..sort((a, b) => a.name.compareTo(b.name));
+      final workersList = await _repository.getWorkers()
+        ..sort((a, b) => a.name.compareTo(b.name));
       emit(state.copyWith(
         apiStatus: LoadingStatus.success,
         workersList: workersList,
@@ -27,7 +28,7 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   void filterWorkers(String query, String searchType) async {
-    try {
+     
       emit(state.copyWith(apiStatus: LoadingStatus.loading));
       if (query.isEmpty) {
         emit(state.copyWith(
@@ -54,9 +55,9 @@ class HomeCubit extends Cubit<HomeState> {
         workersList: filteredList,
         searchType: searchType,
       ));
-    } catch (e) {
-      emit(state.copyWith(apiStatus: LoadingStatus.failure));
-    }
+     
+      
+    
   }
 
   void updateSearchType(String searchType) {

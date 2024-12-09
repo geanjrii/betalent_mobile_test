@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class BetalentWorkerModel extends Equatable {
+class BeTalentWorkerModel extends Equatable {
   final int id;
   final String name;
   final String job;
@@ -8,7 +8,7 @@ class BetalentWorkerModel extends Equatable {
   final String phone;
   final String image;
 
-  const BetalentWorkerModel({
+  const BeTalentWorkerModel({
     required this.id,
     required this.name,
     required this.job,
@@ -17,8 +17,8 @@ class BetalentWorkerModel extends Equatable {
     required this.image,
   });
 
-  factory BetalentWorkerModel.fromJson(Map<String, dynamic> json) {
-    return BetalentWorkerModel(
+  factory BeTalentWorkerModel.fromJson(Map<String, dynamic> json) {
+    return BeTalentWorkerModel(
       id: json['id'],
       name: json['name'],
       job: json['job'],

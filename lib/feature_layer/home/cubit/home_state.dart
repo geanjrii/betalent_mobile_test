@@ -5,14 +5,14 @@ enum LoadingStatus { loading, failure, success }
 class HomeState extends Equatable {
   final LoadingStatus apiStatus;
   final String searchType;
-  final List<BetalentWorkerModel> workersList;
-  final List<BetalentWorkerModel> originalWorkersList;
+  final List<BeTalentWorkerModel> workersList;
+  final List<BeTalentWorkerModel> originalWorkersList;
 
   const HomeState._({
     this.apiStatus = LoadingStatus.loading,
     this.searchType = 'name',
-    this.workersList = const <BetalentWorkerModel>[],
-    this.originalWorkersList = const <BetalentWorkerModel>[],
+    this.workersList = const <BeTalentWorkerModel>[],
+    this.originalWorkersList = const <BeTalentWorkerModel>[],
   });
 
   const HomeState.loading() : this._();
@@ -20,7 +20,7 @@ class HomeState extends Equatable {
   const HomeState.failure() : this._(apiStatus: LoadingStatus.failure);
 
   const HomeState.success({
-    required List<BetalentWorkerModel> list,
+    required List<BeTalentWorkerModel> list,
     String searchType = 'name',
   }) : this._(
           apiStatus: LoadingStatus.success,
@@ -32,8 +32,8 @@ class HomeState extends Equatable {
   HomeState copyWith({
     String? searchType,
     LoadingStatus? apiStatus,
-    List<BetalentWorkerModel>? workersList,
-    List<BetalentWorkerModel>? originalWorkersList,
+    List<BeTalentWorkerModel>? workersList,
+    List<BeTalentWorkerModel>? originalWorkersList,
   }) {
     return HomeState._(
       searchType: searchType ?? this.searchType,

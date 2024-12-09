@@ -1,4 +1,4 @@
-import 'package:betalent_mobile_test/domain_layer/domain_layer.dart';
+import 'package:betalent_mobile_test/data_layer/data_layer.dart';
 import 'package:betalent_mobile_test/feature_layer/home/home.dart';
 import 'package:betalent_mobile_test/style_guide.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          HomeCubit(repository: context.read<BetalentRepository>())
+          HomeCubit(repository: context.read<BeTalentWorkerRepository>())
             ..onDataLoaded(),
       child: const HomeView(),
     );

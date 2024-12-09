@@ -9,7 +9,7 @@ class WorkerDetails extends StatelessWidget {
     required this.worker,
   });
 
-  final BetalentWorkerModel worker;
+  final BeTalentWorkerModel worker;
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class Phone extends StatelessWidget {
     return ListTile(
       leading: const Text('Telefone:', style: h2),
       trailing: Text(
-          '+${phone.substring(0, 2)} (${phone.substring(2, 4)}) ${phone.substring(4, 8)}-${phone.substring(8)}',
+          '+${phone.substring(0, 2)} (${phone.substring(2, 4)}) ${phone.substring(4, 9)}-${phone.substring(9)}',
           style: h3),
     );
   }

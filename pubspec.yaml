@@ -41,6 +41,7 @@ dependencies:
   http: ^1.2.2
   bloc_test: ^9.1.7
   mocktail: ^1.0.4
+  mocktail_image_network: ^1.2.0
 
 dev_dependencies:
   flutter_test:

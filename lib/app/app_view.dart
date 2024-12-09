@@ -1,6 +1,5 @@
 
 import 'package:betalent_mobile_test/data_layer/data_layer.dart';
-import 'package:betalent_mobile_test/domain_layer/domain_layer.dart';
 import 'package:betalent_mobile_test/feature_layer/fetaure_layer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +12,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: RepositoryProvider(
-        create: (context) => BetalentRepository(api: BetalentApi()),
+        create: (context) => BeTalentWorkerRepository(api: BeTalentApiService()),
         child: const HomePage(),
       ),
     );
